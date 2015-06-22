@@ -24,6 +24,7 @@ package org.json;
  SOFTWARE.
  */
 
+import java.beans.Transient;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
@@ -992,6 +993,9 @@ public class JSONObject {
         for (int i = 0; i < methods.length; i += 1) {
             try {
                 Method method = methods[i];
+                Transient annotation = method.getAnnotation(Transient.class);
+                if (annotation != null)
+                    continue;
                 if (Modifier.isPublic(method.getModifiers())) {
                     String name = method.getName();
                     String key = "";
