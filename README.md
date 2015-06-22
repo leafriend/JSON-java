@@ -1,3 +1,34 @@
+This is fork of [Douglas Crockford](https://github.com/douglascrockford)'s [JSON Java](https://github.com/douglascrockford/JSON-java) library.
+
+### Use in Maven
+
+```xml
+<project>
+  <dependencies>
+    <dependency>
+      <groupId>io.github.leafriend</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>20150622</version>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>json-simple repository</id>
+      <url>http://leafriend.github.io/json-simple/repository/</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+</project>
+```
+
+### Chagelog
+
+#### 20150622
+
+  * Ignore getter method with [`@Transient`](http://docs.oracle.com/javase/7/docs/api/java/beans/Transient.html) annotation.
+
+- - -
+
 JSON in Java [package org.json]
 
 This package needs a new owner. I have not used it in over a decade, and I do 
